@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const delaware = {
     population: 973764,
@@ -7,24 +7,40 @@ const delaware = {
 }
 
 const Delaware = () => {
+    const [toggle, setToggle] = useState(false)
+    const [boggle, setBoggle] = useState(false)
+    const [snoggle, setSnoggle] = useState(false)
 
     let random = Math.floor(Math.random()*4)
+
+    const deInfo = () => {setToggle(!toggle)}
+    const countyInfo = () => {setBoggle(!boggle)}
+    const townInfo = () => {setSnoggle(!snoggle)}
 
     console.log(random)
 
     return (
         <div>
-            <h2>Welcome to Delaware</h2>
-            <h3>General Info:</h3>
-            <h5>population:</h5>
-            <p>{delaware.population}</p>
-            <h5>nickname:</h5>
-            <p>{delaware.nickname[random]}</p>
-            <h4>Counties:</h4>
-            {
-                delaware.counties.map(county =><p>{county}</p>)
-            }
-            <h3>News Sources:</h3>
+            <h2 onClick={deInfo}>Welcome to Delaware</h2>
+            
+            <div className="hidden">
+                {toggle? (
+                <div className="stateHolder">
+                    <h3 className="stateInfo">General Info:</h3>
+                    <h5 className="stateInfo">population:</h5>
+                    <p className="stateInfo">{delaware.population}</p>
+                    <h5 className="stateInfo">nickname:</h5>
+                    <p className="stateInfo">{delaware.nickname[random]}</p>
+                    <h4 className="stateInfo">Counties:</h4>
+                    {
+                        delaware.counties.map(county =>
+                            <p  className="stateInfo">{county}</p>
+                        )
+                    }
+                    <h3 className="stateInfo">News Sources:</h3>
+                </div> ) : (null)
+                }
+            </div>
         </div>
     )
 }

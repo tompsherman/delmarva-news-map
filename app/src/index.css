@@ -18,3 +18,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.stateHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stateInfo {
+  width: 29%;
+}
+
+.column {
+  width: 40%;
+}
