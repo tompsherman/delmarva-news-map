@@ -3,7 +3,48 @@ import React, {useState} from 'react'
 const delaware = {
     population: 973764,
     nickname: ["the small wonder", "the first state", "the blue hen state", "the diamond state"],
-    counties: ["New Castle", "Kent", "Sussex"]
+    counties: [
+        {
+        name: "New Castle", 
+        population: 558753, 
+        nickname:"the DuPont's front lawn", 
+        cities: [
+            {
+            name: "Wilmington", 
+            population: 70635, 
+            nickname: "little Philidelphia"
+            }, 
+            {
+            name: "Newark", 
+            population: 33673, 
+            nickname: "Delaware's Library"
+            }]
+        }, 
+        {
+        name: "Kent",
+        population: 180786,
+        nickname: "the Doldrums",
+        cities: [
+            {
+                name: "Dover",
+                population: 38079,
+                nickname: "the mistake on the lake"
+            }
+        ]
+        },
+        {
+        name: "Sussex",
+        population: 234225,
+        nickname: "the reason to visit Delaware",
+        cities: [
+            {
+                name: "Milford",
+                population: 11353,
+                nickname: "Sussex County's Pearl Necklace"
+            }
+        ]
+        }
+    ]
 }
 
 const Delaware = () => {
