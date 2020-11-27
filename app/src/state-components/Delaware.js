@@ -75,11 +75,42 @@ const Delaware = () => {
                     <h4 className="stateInfo">Counties:</h4>
                     {
                         delaware.counties.map(county =>
-                            <p  className="stateInfo">{county}</p>
+                            <div>
+                                <p  className="">{county.name}</p>
+                                <p  className="">{county.population}</p>
+                                <p  className="">{county.nickname}</p>
+                            </div>
                         )
                     }
                     <h3 className="stateInfo">News Sources:</h3>
                 </div> ) : (null)
+                }
+                {
+                    delaware.counties[0].cities.map(city =>
+                        <div>
+                            <p  className="">{city.name}</p>
+                            <p  className="">{city.population}</p>
+                            <p  className="">{city.nickname}</p>
+                        </div>
+                    )
+                }
+                {
+                    delaware.counties[1].cities.map(city =>
+                        <div>
+                            <p  className="">{city.name}</p>
+                            <p  className="">{city.population}</p>
+                            <p  className="">{city.nickname}</p>
+                        </div>
+                    )
+                }
+                {
+                    delaware.counties[2].cities.map(city =>
+                        <div>
+                            <p  className="">{city.name}</p>
+                            <p  className="">{city.population}</p>
+                            <p  className="">{city.nickname}</p>
+                        </div>
+                    )
                 }
             </div>
         </div>
