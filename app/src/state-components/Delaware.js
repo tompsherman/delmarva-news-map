@@ -3,32 +3,56 @@ import React, {useState} from 'react'
 const delaware = {
     population: 973764,
     nickname: ["the small wonder", "the first state", "the blue hen state", "the diamond state"],
+    admin: "Gov. John Carney",
+    newsUrls: [
+        "https://news.delaware.gov",
+    ],
     counties: [
         {
         name: "New Castle", 
         population: 558753, 
         nickname:"the DuPont's front lawn", 
+        admin: "",
+        newsUrls: [
+            ""
+        ],
         cities: [
             {
             name: "Wilmington", 
             population: 70635, 
-            nickname: "little Philidelphia"
+            nickname: "little Philidelphia",
+            admin: "",
+            newsUrls: [
+                ""
+            ],
             }, 
             {
             name: "Newark", 
             population: 33673, 
-            nickname: "Delaware's Library"
+            nickname: "Delaware's Library",
+            admin: "",
+            newsUrls: [
+                ""
+            ],
             }]
         }, 
         {
         name: "Kent",
         population: 180786,
         nickname: "the Doldrums",
+        admin: "",
+        newsUrls: [
+            ""
+        ],
         cities: [
             {
                 name: "Dover",
                 population: 38079,
-                nickname: "the mistake on the lake"
+                nickname: "the mistake on the lake",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
             }
         ]
         },
@@ -36,11 +60,19 @@ const delaware = {
         name: "Sussex",
         population: 234225,
         nickname: "the reason to visit Delaware",
+        admin: "",
+        newsUrls: [
+            ""
+        ],
         cities: [
             {
                 name: "Milford",
                 population: 11353,
-                nickname: "Sussex County's Pearl Necklace"
+                nickname: "Sussex County's Pearl Necklace",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
             }
         ]
         }

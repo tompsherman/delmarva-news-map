@@ -1,9 +1,62 @@
 import React, {useState} from 'react'
 
 const virginia = {
-    population: 44200,
-    nickname: ["the old dominion"],
-    counties: ["Northampton", "Accomack"]
+    population: 0,
+    nickname: ["old dominion"],
+    admin: "Gov. Terry McCauliffe",
+    newsUrls: [
+        "https://www.governor.virginia.gov/newsroom/news-releases/",
+    ],
+    counties: [
+        {
+        name: "Accomack", 
+        population: 0, 
+        nickname:"", 
+        admin: "",
+        newsUrls: [
+            ""
+        ],
+        cities: [
+            {
+            name: "", 
+            population: 0, 
+            nickname: "",
+            admin: "",
+            newsUrls: [
+                ""
+            ],
+            }, 
+            {
+            name: "", 
+            population: 0, 
+            nickname: "",
+            admin: "",
+            newsUrls: [
+                ""
+            ],
+            }]
+        }, 
+        {
+        name: "Northampton",
+        population: 0,
+        nickname: "",
+        admin: "",
+        newsUrls: [
+            ""
+        ],
+        cities: [
+            {
+                name: "",
+                population: 0,
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            }
+        ]
+        }
+    ]
 }
 
 const Virginia = () => {
