@@ -14,7 +14,7 @@ const virginia = {
         nickname:"", 
         admin: "",
         newsUrls: [
-            ""
+            "https://www.co.accomack.va.us/"
         ],
         cities: [
             {
@@ -42,7 +42,7 @@ const virginia = {
         nickname: "",
         admin: "",
         newsUrls: [
-            ""
+            "https://www.co.northampton.va.us/"
         ],
         cities: [
             {

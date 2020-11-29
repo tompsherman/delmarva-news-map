@@ -42,7 +42,7 @@ const delaware = {
         nickname: "the Doldrums",
         admin: "",
         newsUrls: [
-            ""
+            "https://www.co.kent.de.us/"
         ],
         cities: [
             {
@@ -62,7 +62,7 @@ const delaware = {
         nickname: "the reason to visit Delaware",
         admin: "",
         newsUrls: [
-            ""
+            "https://sussexcountyde.gov/"
         ],
         cities: [
             {
