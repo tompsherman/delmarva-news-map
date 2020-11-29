@@ -81,14 +81,10 @@ const delaware = {
 
 const Delaware = () => {
     const [toggle, setToggle] = useState(false)
-    const [boggle, setBoggle] = useState(false)
-    const [snoggle, setSnoggle] = useState(false)
-
+    
     let random = Math.floor(Math.random()*4)
 
     const deInfo = () => {setToggle(!toggle)}
-    const countyInfo = () => {setBoggle(!boggle)}
-    const townInfo = () => {setSnoggle(!snoggle)}
 
     console.log(random)
 

@@ -1,16 +1,16 @@
 import React, {useState} from 'react'
 
 const virginia = {
-    population: 0,
+    population: "8,536,000 in state; 45,553 on Eastern Shore",
     nickname: ["old dominion"],
-    admin: "Gov. Terry McCauliffe",
+    admin: "Gov. Ralph Northam",
     newsUrls: [
         "https://www.governor.virginia.gov/newsroom/news-releases/",
     ],
     counties: [
         {
         name: "Accomack", 
-        population: 0, 
+        population: 32412, 
         nickname:"", 
         admin: "",
         newsUrls: [
@@ -18,27 +18,37 @@ const virginia = {
         ],
         cities: [
             {
-            name: "", 
-            population: 0, 
-            nickname: "",
-            admin: "",
-            newsUrls: [
-                ""
-            ],
+                name: "Chincoteague", 
+                population: 2941, 
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
             }, 
             {
-            name: "", 
-            population: 0, 
-            nickname: "",
-            admin: "",
-            newsUrls: [
-                ""
-            ],
-            }]
+                name: "Onancock", 
+                population: 1263, 
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Tangier", 
+                population: 727, 
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+                },
+        ]
         }, 
         {
         name: "Northampton",
-        population: 0,
+        population: 11735,
         nickname: "",
         admin: "",
         newsUrls: [
@@ -46,8 +56,17 @@ const virginia = {
         ],
         cities: [
             {
-                name: "",
-                population: 0,
+                name: "Exmore",
+                population: 1460,
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Cape Charles",
+                population: 1009,
                 nickname: "",
                 admin: "",
                 newsUrls: [
@@ -78,36 +97,42 @@ const Virginia = () => {
             
             <div className="hidden">
                 {toggle? (
-                <div>
-                    <h3>General Info:</h3>
-                    <h5>population:</h5>
-                    <p>{virginia.population}</p>
-                    <h5>nickname:</h5>
-                    <p>{virginia.nickname[random]}</p>
-                    <h4>Counties:</h4>
-                    <p onClick={countyInfo}>Northampton</p>
-                    <div className="moreHidden">
-                                    {boggle? (
-                                    <div>
-                                        <p>county population</p>
-                                        <p>county nickname</p>
-                                        <p onClick={townInfo}>this is a town</p>
-                                        <div className="mostHidden">
-                                            {snoggle? (
-                                                <div>
-                                                    <p>town population</p>
-                                                    <p>town nickname</p>
-                                                    <p>other things about the town</p>
-                                                </div>
-                                            ):(null)}
-                                        </div>
-                                    </div>
-                                    ):(null)}
-                    </div>
-                    <p onClick={countyInfo}>Accomack</p>
-                    
-                    <h3>News Sources:</h3>
+                <div className="stateHolder">
+                    <h3 className="stateInfo">General Info:</h3>
+                    <h5 className="stateInfo">population:</h5>
+                    <p className="stateInfo">{virginia.population}</p>
+                    <h5 className="stateInfo">nickname:</h5>
+                    <p className="stateInfo">{virginia.nickname[random]}</p>
+                    <h4 className="stateInfo">Counties:</h4>
+                    {
+                        virginia.counties.map(county =>
+                            <div>
+                                <p  className="">{county.name}</p>
+                                <p  className="">{county.population}</p>
+                                <p  className="">{county.nickname}</p>
+                            </div>
+                        )
+                    }
+                    <h3 className="stateInfo">News Sources:</h3>
                 </div> ) : (null)
+                }
+                {
+                    virginia.counties[0].cities.map(city =>
+                        <div>
+                            <p  className="">{city.name}</p>
+                            <p  className="">{city.population}</p>
+                            <p  className="">{city.nickname}</p>
+                        </div>
+                    )
+                }
+                {
+                    virginia.counties[1].cities.map(city =>
+                        <div>
+                            <p  className="">{city.name}</p>
+                            <p  className="">{city.population}</p>
+                            <p  className="">{city.nickname}</p>
+                        </div>
+                    )
                 }
             </div>
         </div>

@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Delmarva News Map roundup</h1>
-      <ProtoState />
+      {/* <ProtoState /> */}
       <Delaware />
       <Maryland />
       <Virginia />
