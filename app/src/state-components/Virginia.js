@@ -110,10 +110,13 @@ const Virginia = () => {
                                 <p  className="">{county.name}</p>
                                 <p  className="">{county.population}</p>
                                 <p  className="">{county.nickname}</p>
+                                <a href={county.newsUrls}>{county.name} website</a>
                             </div>
                         )
                     }
                     <h3 className="stateInfo">News Sources:</h3>
+                    <a href={virginia.newsUrls}>governors office</a>
+
                 </div> ) : (null)
                 }
                 {

@@ -19,6 +19,11 @@ code {
     monospace;
 }
 
+.hidden {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .stateHolder {
   display: flex;
   flex-wrap: wrap;

@@ -73,7 +73,80 @@ const delaware = {
                 newsUrls: [
                     ""
                 ],
-            }
+            },
+            {
+                name: "Lewes",
+                population: 3233,
+                nickname: "first town of the first state",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Rehoboth Beach",
+                population: 1520,
+                nickname: "the Nation's summer capitol",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Seaford",
+                population: 7861,
+                nickname: "Nylon Capitol of the World",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Georgetown",
+                population: 7427,
+                nickname: "Sussex County's admin",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Millsboro",
+                population: 4446,
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Bridgeville",
+                population: 0,
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Laurel",
+                population: 0,
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            {
+                name: "Delmar",
+                population: 0,
+                nickname: "",
+                admin: "",
+                newsUrls: [
+                    ""
+                ],
+            },
+            
         ]
         }
     ]
@@ -107,15 +180,18 @@ const Delaware = () => {
                                 <p  className="">{county.name}</p>
                                 <p  className="">{county.population}</p>
                                 <p  className="">{county.nickname}</p>
+                                <a href={county.newsUrls}>{county.name} website</a>
                             </div>
                         )
                     }
                     <h3 className="stateInfo">News Sources:</h3>
+                    <a href={delaware.newsUrls}>state news room</a>
+
                 </div> ) : (null)
                 }
                 {
                     delaware.counties[0].cities.map(city =>
-                        <div>
+                        <div className="">
                             <p  className="">{city.name}</p>
                             <p  className="">{city.population}</p>
                             <p  className="">{city.nickname}</p>
@@ -124,7 +200,7 @@ const Delaware = () => {
                 }
                 {
                     delaware.counties[1].cities.map(city =>
-                        <div>
+                        <div className="">
                             <p  className="">{city.name}</p>
                             <p  className="">{city.population}</p>
                             <p  className="">{city.nickname}</p>
@@ -133,7 +209,7 @@ const Delaware = () => {
                 }
                 {
                     delaware.counties[2].cities.map(city =>
-                        <div>
+                        <div className="">
                             <p  className="">{city.name}</p>
                             <p  className="">{city.population}</p>
                             <p  className="">{city.nickname}</p>
