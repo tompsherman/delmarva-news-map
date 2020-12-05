@@ -167,55 +167,65 @@ const Delaware = () => {
             
             <div className="hidden">
                 {toggle? (
-                <div className="stateHolder">
-                    <h3 className="stateInfo">General Info:</h3>
-                    <h5 className="stateInfo">population:</h5>
-                    <p className="stateInfo">{delaware.population}</p>
-                    <h5 className="stateInfo">nickname:</h5>
-                    <p className="stateInfo">{delaware.nickname[random]}</p>
-                    <h4 className="stateInfo">Counties:</h4>
-                    {
-                        delaware.counties.map(county =>
-                            <div>
-                                <p  className="">{county.name}</p>
-                                <p  className="">{county.population}</p>
-                                <p  className="">{county.nickname}</p>
-                                <a href={county.newsUrls}>{county.name} website</a>
-                            </div>
-                        )
-                    }
-                    <h3 className="stateInfo">News Sources:</h3>
-                    <a href={delaware.newsUrls}>state news room</a>
+                <div className="boxContainer">
+                    <h3 className="">General Info:</h3>
+                    <div className="stateHolder">
+                        <h5 className="stateInfo">population:</h5>
+                        <p className="stateInfo">{delaware.population}</p>
+                    </div>
+                    <div className="stateHolder">
+                        <h5 className="stateInfo">nickname:</h5>
+                        <p className="stateInfo">{delaware.nickname[random]}</p>
+                    </div>
+                    <h4 className="">Counties:</h4>
+                    <div className="stateHolder">
+                        {
+                            delaware.counties.map(county =>
+                                <div>
+                                    <p  className="">{county.name}</p>
+                                    <p  className="">{county.population}</p>
+                                    <p  className="">{county.nickname}</p>
+                                    <a href={county.newsUrls}>{county.name} website</a>
+                                </div>
+                            )
+                        }
+                    </div>
+                    <h3 className="">News Sources:</h3>
+                    <div className="stateHolder">
+                        <a href={delaware.newsUrls}>state news room</a>
+                    </div>
 
                 </div> ) : (null)
                 }
-                {
-                    delaware.counties[0].cities.map(city =>
-                        <div className="">
-                            <p  className="">{city.name}</p>
-                            <p  className="">{city.population}</p>
-                            <p  className="">{city.nickname}</p>
-                        </div>
-                    )
-                }
-                {
-                    delaware.counties[1].cities.map(city =>
-                        <div className="">
-                            <p  className="">{city.name}</p>
-                            <p  className="">{city.population}</p>
-                            <p  className="">{city.nickname}</p>
-                        </div>
-                    )
-                }
-                {
-                    delaware.counties[2].cities.map(city =>
-                        <div className="">
-                            <p  className="">{city.name}</p>
-                            <p  className="">{city.population}</p>
-                            <p  className="">{city.nickname}</p>
-                        </div>
-                    )
-                }
+                <div className="stateHolder">
+                    {
+                        delaware.counties[0].cities.map(city =>
+                            <div className="">
+                                <p  className="">{city.name}</p>
+                                <p  className="">{city.population}</p>
+                                <p  className="">{city.nickname}</p>
+                            </div>
+                        )
+                    }
+                    {
+                        delaware.counties[1].cities.map(city =>
+                            <div className="">
+                                <p  className="">{city.name}</p>
+                                <p  className="">{city.population}</p>
+                                <p  className="">{city.nickname}</p>
+                            </div>
+                        )
+                    }
+                    {
+                        delaware.counties[2].cities.map(city =>
+                            <div className="">
+                                <p  className="">{city.name}</p>
+                                <p  className="">{city.population}</p>
+                                <p  className="">{city.nickname}</p>
+                            </div>
+                        )
+                    }
+                </div>
             </div>
         </div>
     )
