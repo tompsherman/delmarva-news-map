@@ -154,10 +154,12 @@ const delaware = {
 
 const Delaware = () => {
     const [toggle, setToggle] = useState(false)
+    const [boggle, setBoggle] = useState(false)
     
     let random = Math.floor(Math.random()*4)
 
     const deInfo = () => {setToggle(!toggle)}
+    const countyInfo = () => {setBoggle(!boggle)}
 
     console.log(random)
 
@@ -168,6 +170,10 @@ const Delaware = () => {
             <div className="hidden">
                 {toggle? (
                 <div className="boxContainer">
+                    <h3 className="">News Sources:</h3>
+                    <div className="stateHolder">
+                        <a href={delaware.newsUrls}>state news room</a>
+                    </div>
                     <h3 className="">General Info:</h3>
                     <div className="stateHolder">
                         <h5 className="stateInfo">population:</h5>
@@ -177,27 +183,23 @@ const Delaware = () => {
                         <h5 className="stateInfo">nickname:</h5>
                         <p className="stateInfo">{delaware.nickname[random]}</p>
                     </div>
-                    <h4 className="">Counties:</h4>
-                    <div className="stateHolder">
-                        {
-                            delaware.counties.map(county =>
+                    <h4 onClick={countyInfo}>Counties:</h4>
+                    <div className="hidden">
+                        { boggle ?
+                            (delaware.counties.map(county =>
                                 <div>
                                     <p  className="">{county.name}</p>
                                     <p  className="">{county.population}</p>
                                     <p  className="">{county.nickname}</p>
                                     <a href={county.newsUrls}>{county.name} website</a>
                                 </div>
-                            )
+                            )):(null)
                         }
-                    </div>
-                    <h3 className="">News Sources:</h3>
-                    <div className="stateHolder">
-                        <a href={delaware.newsUrls}>state news room</a>
                     </div>
 
                 </div> ) : (null)
                 }
-                <div className="stateHolder">
+                {/* <div className="stateHolder">
                     {
                         delaware.counties[0].cities.map(city =>
                             <div className="">
@@ -225,7 +227,7 @@ const Delaware = () => {
                             </div>
                         )
                     }
-                </div>
+                </div> */}
             </div>
         </div>
     )
